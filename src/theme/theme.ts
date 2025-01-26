@@ -60,7 +60,11 @@ export const theme = createTheme({
     s68: 68,
     s72: 72,
   },
-  borderRadii: {},
+  borderRadii: {
+    br8: 8,
+    br12: 12,
+    br16: 16,
+  },
 });
 
 export type Theme = typeof theme;

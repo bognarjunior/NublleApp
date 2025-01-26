@@ -15,9 +15,7 @@ function App(): React.JSX.Element {
       <SafeAreaView>
         <View style={{ paddingHorizontal: 20}}>
           <Text italic preset="headingMedium">App Nuble</Text>
-          <Box marginBottom="s20">
-            <Button title="Entrar" />
-          </Box>
+          <Button title="Entrar" marginBottom="s20" />
           <Button loading title="Loading" />
         </View>
       </SafeAreaView>
