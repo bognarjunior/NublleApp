@@ -7,7 +7,6 @@ import { Text } from './src/components/Text';
 import Button from './src/components/Button';
 import { ThemeProvider } from '@shopify/restyle';
 import { theme } from './src/theme/theme';
-import { Box } from './src/components/Box';
 
 function App(): React.JSX.Element {
   return (
@@ -15,8 +14,13 @@ function App(): React.JSX.Element {
       <SafeAreaView>
         <View style={{ paddingHorizontal: 20}}>
           <Text italic preset="headingMedium">App Nuble</Text>
-          <Button title="Entrar" marginBottom="s20" />
-          <Button loading title="Loading" />
+          <Button title="Primary" marginBottom="s20" />
+          <Button disabled title="Primary" marginBottom="s20" />
+
+          <Button preset="outline" title="Outline" marginBottom="s20" />
+          <Button disabled preset="outline" title="Outline" marginBottom="s20" />
+
+          <Button loading title="Loading" marginBottom="s20" />
         </View>
       </SafeAreaView>
     </ThemeProvider>
