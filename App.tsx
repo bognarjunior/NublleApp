@@ -7,6 +7,8 @@ import { Text } from './src/components/Text';
 import Button from './src/components/Button';
 import { ThemeProvider } from '@shopify/restyle';
 import { theme } from './src/theme/theme';
+import EyeOff from './src/assets/icons/EyeOff';
+import EyeOn from './src/assets/icons/EyeOn';
 
 function App(): React.JSX.Element {
   return (
@@ -22,6 +24,8 @@ function App(): React.JSX.Element {
 
           <Button loading title="Loading" marginBottom="s20" />
         </View>
+        <EyeOff size={100} color='red' />
+        <EyeOn size={100} color='green' />
       </SafeAreaView>
     </ThemeProvider>
   );
