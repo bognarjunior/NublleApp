@@ -1,5 +1,4 @@
 import {
-  TextProps as RNTextProps,
   TextStyle,
 } from 'react-native';
 import React, { ComponentProps } from 'react';

@@ -7,8 +7,7 @@ import { Text } from './src/components/Text';
 import Button from './src/components/Button';
 import { ThemeProvider } from '@shopify/restyle';
 import { theme } from './src/theme/theme';
-import EyeOff from './src/assets/icons/EyeOff';
-import EyeOn from './src/assets/icons/EyeOn';
+import Icon from './src/components/Icon';
 
 function App(): React.JSX.Element {
   return (
@@ -23,9 +22,12 @@ function App(): React.JSX.Element {
           <Button disabled preset="outline" title="Outline" marginBottom="s20" />
 
           <Button loading title="Loading" marginBottom="s20" />
+
+          <Icon name="arrowLeft" color="primary" size={30} />
+          <Icon name="eyeOn" color="primary" size={30} />
+          <Icon name="eyeOff" color="primary" size={30} />
+          <Icon name="trash" color="primary" size={30} />
         </View>
-        <EyeOff size={100} color='red' />
-        <EyeOn size={100} color='green' />
       </SafeAreaView>
     </ThemeProvider>
   );
