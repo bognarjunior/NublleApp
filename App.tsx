@@ -24,6 +24,10 @@ function App(): React.JSX.Element {
           <Button loading title="Loading" marginBottom="s20" />
 
           <Icon name="arrowLeft" color="primary" size={30} />
+          <Icon name="arrowRight" color="primary" size={30} />
+          <Icon name="bell" color="primary" size={30} />
+          <Icon name="bellOn" color="primary" size={30} />
+          <Icon name="bookmark" color="primary" size={30} />
           <Icon name="eyeOn" color="primary" size={30} />
           <Icon name="eyeOff" color="primary" size={30} />
           <Icon name="trash" color="primary" size={30} />

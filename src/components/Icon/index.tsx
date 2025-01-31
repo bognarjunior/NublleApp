@@ -5,6 +5,10 @@ import { ThemeColors } from '../../theme/theme';
 import { useAppTheme } from '../../hooks/useAppTheme';
 import Trash from '../../assets/icons/Trash';
 import ArrowLeft from '../../assets/icons/ArrowLeft';
+import ArrowRight from '../../assets/icons/ArrowRight';
+import Bell from '../../assets/icons/Bell';
+import BellOn from '../../assets/icons/BellOn';
+import Bookmark from '../../assets/icons/Bookmark';
 
 export interface IconBaseProps {
   size?: number;
@@ -30,6 +34,10 @@ export default function Icon({
 
 const iconRegistry = {
   arrowLeft: ArrowLeft,
+  arrowRight: ArrowRight,
+  bell: Bell,
+  bellOn: BellOn,
+  bookmark: Bookmark,
   eyeOn:EyeOn,
   eyeOff: EyeOff,
   trash: Trash,
