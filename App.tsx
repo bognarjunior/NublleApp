@@ -28,6 +28,12 @@ function App(): React.JSX.Element {
           <Icon name="bell" color="primary" size={30} />
           <Icon name="bellOn" color="primary" size={30} />
           <Icon name="bookmark" color="primary" size={30} />
+          <Icon name="bookmarkFill" color="primary" size={30} />
+          <Icon name="camera" color="primary" size={30} />
+          <Icon name="cameraClick" color="primary" size={30} />
+          <Icon name="chat" color="primary" size={30} />
+          <Icon name="chatOn" color="primary" size={30} />
+          <Icon name="check" color="primary" size={30} />
           <Icon name="eyeOn" color="primary" size={30} />
           <Icon name="eyeOff" color="primary" size={30} />
           <Icon name="trash" color="primary" size={30} />

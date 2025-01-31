@@ -9,6 +9,12 @@ import ArrowRight from '../../assets/icons/ArrowRight';
 import Bell from '../../assets/icons/Bell';
 import BellOn from '../../assets/icons/BellOn';
 import Bookmark from '../../assets/icons/Bookmark';
+import BookmarkFill from '../../assets/icons/BookmarkFill';
+import Camera from '../../assets/icons/Camera';
+import CameraClick from '../../assets/icons/CameraClick';
+import Chat from '../../assets/icons/Chat';
+import ChatOn from '../../assets/icons/ChatOn';
+import Check from '../../assets/icons/Check';
 
 export interface IconBaseProps {
   size?: number;
@@ -38,6 +44,12 @@ const iconRegistry = {
   bell: Bell,
   bellOn: BellOn,
   bookmark: Bookmark,
+  bookmarkFill: BookmarkFill,
+  camera: Camera,
+  cameraClick: CameraClick,
+  chat: Chat,
+  chatOn: ChatOn,
+  check: Check,
   eyeOn:EyeOn,
   eyeOff: EyeOff,
   trash: Trash,
