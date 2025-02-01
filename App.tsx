@@ -25,14 +25,10 @@ function App(): React.JSX.Element {
 
           <Icon name="arrowLeft" color="primary" size={30} />
           <Icon name="arrowRight" color="primary" size={30} />
-          <Icon name="comment" color="primary" size={30} />
-          <Icon name="flasfOff" color="primary" size={30} />
-          <Icon name="heart" color="primary" size={30} />
-          <Icon name="heartFill" color="primary" size={30} />
-          <Icon name="home" color="primary" size={30} />
-          <Icon name="homeFill" color="primary" size={30} />
-          <Icon name="message" color="primary" size={30} />
-          <Icon name="messageRound" color="primary" size={30} />
+          <Icon name="profile" color="primary" size={30} />
+          <Icon name="profileFill" color="primary" size={30} />
+          <Icon name="search" color="primary" size={30} />
+          <Icon name="settings" color="primary" size={30} />
 
         </View>
       </SafeAreaView>

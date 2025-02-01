@@ -27,6 +27,11 @@ import Home from '../../assets/icons/Home';
 import HomeFill from '../../assets/icons/HomeFill';
 import Message from '../../assets/icons/Message';
 import MessageRound from '../../assets/icons/MessageRound';
+import NewPost from '../../assets/icons/NewPost';
+import Profile from '../../assets/icons/Profile';
+import ProfileFill from '../../assets/icons/ProfileFill';
+import Search from '../../assets/icons/Search';
+import Settings from '../../assets/icons/Settings';
 
 export interface IconBaseProps {
   size?: number;
@@ -76,6 +81,11 @@ const iconRegistry = {
   homeFill: HomeFill,
   message: Message,
   messageRound: MessageRound,
+  newPost: NewPost,
+  profile: Profile,
+  profileFill: ProfileFill,
+  search: Search,
+  settings: Settings,
   trash: Trash,
 };
 
