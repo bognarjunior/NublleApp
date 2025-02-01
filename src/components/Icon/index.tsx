@@ -15,6 +15,18 @@ import CameraClick from '../../assets/icons/CameraClick';
 import Chat from '../../assets/icons/Chat';
 import ChatOn from '../../assets/icons/ChatOn';
 import Check from '../../assets/icons/Check';
+import Checkround from '../../assets/icons/CheckRound';
+import ChevronRight from '../../assets/icons/ChevronRight';
+import Comment from '../../assets/icons/Comment';
+import ErrorRound from '../../assets/icons/ErrorRound';
+import FlashOff from '../../assets/icons/FlashOff';
+import FlashOn from '../../assets/icons/FlashOn';
+import Heart from '../../assets/icons/Heart';
+import HeartFill from '../../assets/icons/HeartFill';
+import Home from '../../assets/icons/Home';
+import HomeFill from '../../assets/icons/HomeFill';
+import Message from '../../assets/icons/Message';
+import MessageRound from '../../assets/icons/MessageRound';
 
 export interface IconBaseProps {
   size?: number;
@@ -50,8 +62,20 @@ const iconRegistry = {
   chat: Chat,
   chatOn: ChatOn,
   check: Check,
+  checkRound: Checkround,
+  chevronRight: ChevronRight,
+  comment: Comment,
+  errorRound: ErrorRound,
   eyeOn:EyeOn,
   eyeOff: EyeOff,
+  flasfOff: FlashOff,
+  flasfOn: FlashOn,
+  heart: Heart,
+  heartFill: HeartFill,
+  home: Home,
+  homeFill: HomeFill,
+  message: Message,
+  messageRound: MessageRound,
   trash: Trash,
 };
 
