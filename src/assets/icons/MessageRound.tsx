@@ -1,5 +1,5 @@
 import React from 'react';
-import { Path, Svg } from 'react-native-svg';
+import { Circle, Path, Svg } from 'react-native-svg';
 import { IconBaseProps } from '../../components/Icon';
 
 export default function MessageRound({size = 20, color = 'black'}: IconBaseProps) {
@@ -7,9 +7,10 @@ export default function MessageRound({size = 20, color = 'black'}: IconBaseProps
     <Svg
     width={size}
     height={size}
-    viewBox="0 0 20 20"
+    viewBox="0 0 48 48"
     fill="none"
   >
+    <Circle cx="24" cy="24" r="24" fill="#074C4E"/>
     <Path
       fillRule="evenodd"
       clipRule="evenodd"

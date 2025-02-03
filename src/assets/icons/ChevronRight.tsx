@@ -12,10 +12,11 @@ export default function ChevronRight({size = 20, color = 'black'}: IconBaseProps
     fill="none"
   >
     <Path
-      fillRule="evenodd"
-      clipRule="evenodd"
       d="M7 4L14 10L7 16"
-      fill={color}
+      stroke={color}
+      strokeLinejoin="round"
+      strokeWidth={2}
+      strokeLinecap="round"
     />
   </Svg>
   );

@@ -7,29 +7,41 @@ import { Text } from './src/components/Text';
 import Button from './src/components/Button';
 import { ThemeProvider } from '@shopify/restyle';
 import { theme } from './src/theme/theme';
-import Icon from './src/components/Icon';
+import { Box } from './src/components/Box';
+import TextInput from './src/components/TextInput';
 
 function App(): React.JSX.Element {
   return (
     <ThemeProvider theme={theme}>
       <SafeAreaView>
         <View style={{ paddingHorizontal: 20}}>
-          <Text italic preset="headingMedium">App Nuble</Text>
-          <Button title="Primary" marginBottom="s20" />
-          <Button disabled title="Primary" marginBottom="s20" />
+          <Text marginBottom="s8" preset="headingLarge">Olá</Text>
+          <Text marginBottom="s40" preset="paragraphLarge">Digite seu e-mail e senha para entrar</Text>
+          <Box marginBottom="s20">
+            <TextInput placeholder="Digite seu e-mail" label="E-mail"/>
+          </Box>
+          <Box>
+            <TextInput placeholder="Digite sua senha" label="Senha"/>
+          </Box>
 
-          <Button preset="outline" title="Outline" marginBottom="s20" />
-          <Button disabled preset="outline" title="Outline" marginBottom="s20" />
-
-          <Button loading title="Loading" marginBottom="s20" />
-
-          <Icon name="arrowLeft" color="primary" size={30} />
-          <Icon name="arrowRight" color="primary" size={30} />
-          <Icon name="profile" color="primary" size={30} />
-          <Icon name="profileFill" color="primary" size={30} />
-          <Icon name="search" color="primary" size={30} />
-          <Icon name="settings" color="primary" size={30} />
-
+          <Text
+            marginTop="s10"
+            preset="paragraphSmall"
+            bold
+            color="primary"
+          >
+            Esqueci minha senha
+          </Text>
+          <Button
+            title="Entrar"
+            preset="primary"
+            marginTop="s48"
+          />
+          <Button
+            title="Criar uma conta"
+            preset="outline"
+            marginTop="s12"
+          />
         </View>
       </SafeAreaView>
     </ThemeProvider>
