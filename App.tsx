@@ -9,6 +9,7 @@ import { ThemeProvider } from '@shopify/restyle';
 import { theme } from './src/theme/theme';
 import { Box } from './src/components/Box';
 import TextInput from './src/components/TextInput';
+import Icon from './src/components/Icon';
 
 function App(): React.JSX.Element {
   return (
@@ -17,15 +18,21 @@ function App(): React.JSX.Element {
         <View style={{ paddingHorizontal: 20}}>
           <Text marginBottom="s8" preset="headingLarge">Olá</Text>
           <Text marginBottom="s40" preset="paragraphLarge">Digite seu e-mail e senha para entrar</Text>
-          <Box marginBottom="s20">
-            <TextInput placeholder="Digite seu e-mail" label="E-mail"/>
-          </Box>
-          <Box>
-            <TextInput placeholder="Digite sua senha" label="Senha"/>
-          </Box>
+          <TextInput
+            boxProps={{mb:'s20'}} 
+            errorMessage="E-mail inválido"
+            placeholder="Digite seu e-mail"
+            label="E-mail"
+          />
+
+          <TextInput
+            placeholder="Digite sua senha"
+            label="Senha"
+            RightComponent={<Icon color="gray2" name="eyeOn" />}
+            boxProps={{mb:'s10'}}
+          />
 
           <Text
-            marginTop="s10"
             preset="paragraphSmall"
             bold
             color="primary"
