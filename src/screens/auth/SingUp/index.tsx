@@ -10,7 +10,7 @@ export default function SingUp() {
     console.log('submitForm');
   }
   return (
-    <Screen>
+    <Screen canGoBack scrollable>
       <Text preset="headingLarge" mb="s32">Criar uma conta</Text>
       <TextInput
         boxProps={{mb:'s20'}}

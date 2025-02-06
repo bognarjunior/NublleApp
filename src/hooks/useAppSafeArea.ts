@@ -3,9 +3,10 @@ import { useAppTheme } from './useAppTheme';
 
 
 export function useAppSafeArea() {
-  const {top} = useSafeAreaInsets();
+  const {top, bottom} = useSafeAreaInsets();
   const {spacing} = useAppTheme();
   return {
     top: Math.max(top,spacing.s24),
+    botton: Math.max(bottom, spacing.s24),
   };
 }
