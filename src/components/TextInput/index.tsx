@@ -1,10 +1,15 @@
-import { Pressable, TextInput as RNTextInput, TextInputProps, TextStyle } from 'react-native';
+import {
+  Pressable,
+  TextInput as RNTextInput,
+  TextInputProps as RNTextInputProps,
+  TextStyle,
+} from 'react-native';
 import React, { ReactElement, useRef } from 'react';
 import { Box, BoxProps } from '../Box';
 import { $fontFamily, $fontSizes, Text } from '../Text';
 import { useAppTheme } from '../../hooks/useAppTheme';
 
-interface Props extends TextInputProps {
+export interface TextInputProps extends RNTextInputProps {
   label: string;
   errorMessage?: string;
   boxProps?: BoxProps;
@@ -17,7 +22,7 @@ export default function TextInput({
   RightComponent,
   boxProps,
   ...props
-}: Props) {
+}: TextInputProps) {
   const {colors} = useAppTheme();
   const inputRef = useRef<RNTextInput>(null);
 

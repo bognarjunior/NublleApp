@@ -1,9 +1,9 @@
 import React from 'react';
-import Icon from '../../../components/Icon';
 import { Text } from '../../../components/Text';
 import TextInput from '../../../components/TextInput';
 import Button from '../../../components/Button';
 import Screen from '../../../components/Screen';
+import PasswordInput from '../../../components/PasswordInput';
 
 export default function Login() {
   return (
@@ -17,10 +17,9 @@ export default function Login() {
         label="E-mail"
       />
 
-      <TextInput
+      <PasswordInput
         placeholder="Digite sua senha"
         label="Senha"
-        RightComponent={<Icon color="gray2" name="eyeOn" />}
         boxProps={{mb:'s10'}}
       />
 

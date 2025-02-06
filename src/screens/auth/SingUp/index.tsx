@@ -2,8 +2,8 @@ import React from 'react';
 import Screen from '../../../components/Screen';
 import { Text } from '../../../components/Text';
 import TextInput from '../../../components/TextInput';
-import Icon from '../../../components/Icon';
 import Button from '../../../components/Button';
+import PasswordInput from '../../../components/PasswordInput';
 
 export default function SingUp() {
   function submitForm() {
@@ -27,10 +27,9 @@ export default function SingUp() {
         placeholder="Digite seu e-mail"
         label="E-mail"
       />
-      <TextInput
+      <PasswordInput
         placeholder="Digite sua senha"
         label="Senha"
-        RightComponent={<Icon color="gray2" name="eyeOn" />}
         boxProps={{mb:'s48'}}
       />
       <Button
