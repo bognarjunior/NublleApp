@@ -6,14 +6,17 @@ interface Props {
   backgroundColor?: string;
 }
 export function ScrollViewContainer({children, backgroundColor}: Props) {
+  const $style = {backgroundColor, flex: 1};
   return <ScrollView
     keyboardShouldPersistTaps="handled"
-    style={{backgroundColor, flex: 1}}
+    style={$style}
   >
     {children}
   </ScrollView>;
 }
 
 export function ViewContainer({children, backgroundColor}: Props) {
-  return <View style={{backgroundColor}}>{children}</View>;
+  const $style = {backgroundColor, flex: 1};
+  return <View style={$style}>{children}</View>;
 }
+

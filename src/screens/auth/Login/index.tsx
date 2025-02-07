@@ -4,8 +4,15 @@ import TextInput from '../../../components/TextInput';
 import Button from '../../../components/Button';
 import Screen from '../../../components/Screen';
 import PasswordInput from '../../../components/PasswordInput';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../../routes';
 
-export default function Login() {
+type ScreenProps = NativeStackScreenProps<RootStackParamList, 'Login'>;
+export default function Login({navigation}: ScreenProps) {
+
+  function navigateTo(){
+    navigation.navigate('SingUp');
+  }
   return (
     <Screen>
       <Text marginBottom="s8" preset="headingLarge">Olá</Text>
@@ -36,6 +43,7 @@ export default function Login() {
         marginTop="s48"
       />
       <Button
+        onPress={navigateTo}
         title="Criar uma conta"
         preset="outline"
         marginTop="s12"

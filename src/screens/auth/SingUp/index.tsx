@@ -4,10 +4,14 @@ import { Text } from '../../../components/Text';
 import TextInput from '../../../components/TextInput';
 import Button from '../../../components/Button';
 import PasswordInput from '../../../components/PasswordInput';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../../routes';
 
-export default function SingUp() {
+type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SingUp'>;
+
+export default function SingUp({navigation}: ScreenProps) {
   function submitForm() {
-    console.log('submitForm');
+    navigation.navigate('Success');
   }
   return (
     <Screen canGoBack scrollable>
