@@ -39,7 +39,7 @@ export interface IconBaseProps {
   color?: string;
 }
 
-interface Props {
+export interface IconProps {
   name: IconName;
   color?: ThemeColors;
   size?: number;
@@ -51,7 +51,7 @@ export default function Icon({
   color = 'backgroundContrast',
   size,
   onPress,
-}: Props) {
+}: IconProps) {
   const SVGIcon = iconRegistry[name];
   const {colors} = useAppTheme();
 

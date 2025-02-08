@@ -3,16 +3,27 @@ import Screen from '../../../components/Screen';
 import Icon from '../../../components/Icon';
 import { Text } from '../../../components/Text';
 import Button from '../../../components/Button';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../../routes';
 
-export default function Success() {
+type ScreenProps = NativeStackScreenProps<RootStackParamList, 'Success'>;
+
+export default function Success({route}: ScreenProps) {
   function goBack() {
     console.log('goBack');
   }
+  const {title, description, icon} = route.params;
   return (
     <Screen>
-      <Icon name="check" color="success" size={64} />
-      <Text marginTop="s24" preset="headingLarge">Sucesso!</Text>
-      <Text marginTop="s16" preset="paragraphLarge">Sua conta foi criada com sucesso.</Text>
+      <Icon {...icon} size={64} />
+      <Text
+        marginTop="s24"
+        preset="headingLarge"
+      >{title}</Text>
+      <Text
+        marginTop="s16"
+        preset="paragraphLarge"
+      >{description}</Text>
       <Button
         onPress={goBack}
         marginTop="s40"

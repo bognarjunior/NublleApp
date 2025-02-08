@@ -4,11 +4,16 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from '../screens/auth/Login';
 import SingUp from '../screens/auth/SingUp';
 import Success from '../screens/auth/Success';
+import { IconProps } from '../components/Icon';
 
 export type RootStackParamList = {
   Login: undefined;
   SingUp: undefined;
-  Success: undefined;
+  Success: {
+    title: string;
+    description: string;
+    icon: Pick<IconProps, 'name' | 'color'>;
+  };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
