@@ -10,9 +10,13 @@ import { RootStackParamList } from '../../../routes';
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'Login'>;
 export default function Login({navigation}: ScreenProps) {
 
-  function navigateTo(){
+  function navigateToSingUp(){
     navigation.navigate('SingUp');
   }
+  function navigateToForgotPassword(){
+    navigation.navigate('ForgotPassword');
+  }
+
   return (
     <Screen>
       <Text marginBottom="s8" preset="headingLarge">Olá</Text>
@@ -31,6 +35,7 @@ export default function Login({navigation}: ScreenProps) {
       />
 
       <Text
+      onPress={navigateToForgotPassword}
         preset="paragraphSmall"
         bold
         color="primary"
@@ -43,7 +48,7 @@ export default function Login({navigation}: ScreenProps) {
         marginTop="s48"
       />
       <Button
-        onPress={navigateTo}
+        onPress={navigateToSingUp}
         title="Criar uma conta"
         preset="outline"
         marginTop="s12"

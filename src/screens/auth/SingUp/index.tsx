@@ -6,12 +6,14 @@ import Button from '../../../components/Button';
 import PasswordInput from '../../../components/PasswordInput';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../../routes';
+import { useAppResetNavigationSuccess } from '../../../hooks/useAppResetNavigationSuccess';
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SingUp'>;
 
 export default function SingUp({navigation}: ScreenProps) {
+  const { reset } = useAppResetNavigationSuccess();
   function submitForm() {
-    navigation.navigate('Success', {
+    reset({
       title: 'Sua conta foi criada com sucesso!',
       description: 'Agora é só fazer login na nossa plataforma.',
       icon: {
@@ -19,6 +21,7 @@ export default function SingUp({navigation}: ScreenProps) {
         color: 'success',
       },
     });
+
   }
   return (
     <Screen canGoBack scrollable>
