@@ -1,14 +1,14 @@
 import React from 'react';
 import Screen from '../../../components/Screen';
 import { Text } from '../../../components/Text';
-import TextInput from '../../../components/TextInput';
 import Button from '../../../components/Button';
-import PasswordInput from '../../../components/PasswordInput';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../../routes';
 import { useAppResetNavigationSuccess } from '../../../hooks/useAppResetNavigationSuccess';
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { Alert } from 'react-native';
+import FormTextInput from '../../../components/FormTextInput';
+import FormPasswordInput from '../../../components/FormPasswordInput';
 
 type SingUpFormProps = {
   username: string;
@@ -48,41 +48,30 @@ export default function SingUp({navigation}: ScreenProps) {
   return (
     <Screen canGoBack scrollable>
       <Text preset="headingLarge" mb="s32">Criar uma conta</Text>
-      <Controller
+
+      <FormTextInput
         control={control}
         name="username"
         rules={{
           required: 'Usuário obrigatório',
         }}
-        render={({ field, fieldState }) => (
-          <TextInput
-            value={field.value}
-            onChangeText={field.onChange}
-            boxProps={{mb:'s20'}}
-            errorMessage={fieldState.error?.message}
-            placeholder="@"
-            label="Usuário"
-          />
-        )}
+        placeholder="@"
+        label="Usuário"
+        boxProps={{mb:'s20'}}
       />
-      <Controller
+
+      <FormTextInput
         control={control}
         name="fullName"
         rules={{
           required: 'Nome completo obrigatório',
         }}
-        render={({ field, fieldState }) => (
-          <TextInput
-            value={field.value}
-            onChangeText={field.onChange}
-            boxProps={{mb:'s20'}}
-            errorMessage={fieldState.error?.message}
-            placeholder="Digite seu nome completo"
-            label="Nome Completo"
-          />
-        )}
+        placeholder="Digite seu nome completo"
+        label="Nome Completo"
+        boxProps={{mb:'s20'}}
       />
-      <Controller
+
+      <FormTextInput
         control={control}
         name="email"
         rules={{
@@ -92,18 +81,12 @@ export default function SingUp({navigation}: ScreenProps) {
             message: 'E-mail inválido',
           },
         }}
-        render={({ field, fieldState }) => (
-          <TextInput
-            value={field.value}
-            onChangeText={field.onChange}
-            boxProps={{mb:'s20'}}
-            errorMessage={fieldState.error?.message}
-            placeholder="Digite seu e-mail"
-            label="E-mail"
-          />
-        )}
+        placeholder="Digite seu e-mail"
+        label="E-mail"
+        boxProps={{mb:'s20'}}
       />
-      <Controller
+
+      <FormPasswordInput
         control={control}
         name="password"
         rules={{
@@ -113,17 +96,11 @@ export default function SingUp({navigation}: ScreenProps) {
             message: 'Senha deve ter no mínimo 8 caracteres',
           },
         }}
-        render={({ field, fieldState }) => (
-          <PasswordInput
-            value={field.value}
-            onChangeText={field.onChange}
-            boxProps={{mb:'s48'}}
-            errorMessage={fieldState.error?.message}
-            placeholder="Digite sua senha"
-            label="Senha"
-          />
-        )}
+        placeholder="Digite sua senha"
+        label="Senha"
+        boxProps={{mb:'s48'}}
       />
+
       <Button
         disabled={!formState.isValid}
         onPress={handleSubmit(submitForm)}
