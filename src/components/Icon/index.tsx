@@ -1,8 +1,11 @@
 import React from 'react';
+import { Pressable } from 'react-native';
+
+import { ThemeColors } from '@theme';
+import { useAppTheme } from '@hooks';
+
 import EyeOn from '../../assets/icons/EyeOn';
 import EyeOff from '../../assets/icons/EyeOff';
-import { ThemeColors } from '../../theme/theme';
-import { useAppTheme } from '../../hooks/useAppTheme';
 import Trash from '../../assets/icons/Trash';
 import ArrowLeft from '../../assets/icons/ArrowLeft';
 import ArrowRight from '../../assets/icons/ArrowRight';
@@ -32,7 +35,6 @@ import Profile from '../../assets/icons/Profile';
 import ProfileFill from '../../assets/icons/ProfileFill';
 import Search from '../../assets/icons/Search';
 import Settings from '../../assets/icons/Settings';
-import { Pressable } from 'react-native';
 
 export interface IconBaseProps {
   size?: number;
