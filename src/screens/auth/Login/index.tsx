@@ -3,7 +3,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-import { Text } from '../../../components/Text';
+import { Text } from '@components';
 import Button from '../../../components/Button';
 import Screen from '../../../components/Screen';
 import { RootStackParamList } from '../../../routes';
