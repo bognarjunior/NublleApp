@@ -6,13 +6,8 @@ import {
 } from 'react-native';
 import React, { ReactElement, useRef } from 'react';
 
-import {
-  Box,
-  BoxProps,
-  $fontFamily,
-  $fontSizes,
-  Text,
-} from '@components';
+import { Box, BoxProps } from '../Box';
+import { $fontFamily, $fontSizes, Text } from '../Text';
 
 import { useAppTheme } from '@hooks';
 
