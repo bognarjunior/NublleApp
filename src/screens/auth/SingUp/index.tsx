@@ -9,20 +9,18 @@ import { useForm } from 'react-hook-form';
 import { Alert } from 'react-native';
 import FormTextInput from '../../../components/FormTextInput';
 import FormPasswordInput from '../../../components/FormPasswordInput';
+import { singUpSchema, SingUpSchemaType } from './schema';
+import { zodResolver } from '@hookform/resolvers/zod';
 
-type SingUpFormProps = {
-  username: string;
-  fullName: string;
-  email: string;
-  password: string;
-};
+
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SingUp'>;
 
 export default function SingUp({navigation}: ScreenProps) {
 
   const { reset } = useAppResetNavigationSuccess();
-  const { control, handleSubmit, formState } = useForm<SingUpFormProps>({
+  const { control, handleSubmit, formState } = useForm<SingUpSchemaType>({
+    resolver: zodResolver(singUpSchema),
     defaultValues: {
       username: '',
       fullName: '',
@@ -32,7 +30,7 @@ export default function SingUp({navigation}: ScreenProps) {
     mode: 'onChange',
   });
 
-  function submitForm(data: SingUpFormProps) {
+  function submitForm(data: SingUpSchemaType) {
     Alert.alert('Conta criada com sucesso!', data.username);
     console.log(data);
     /* reset({
@@ -52,9 +50,6 @@ export default function SingUp({navigation}: ScreenProps) {
       <FormTextInput
         control={control}
         name="username"
-        rules={{
-          required: 'Usuário obrigatório',
-        }}
         placeholder="@"
         label="Usuário"
         boxProps={{mb:'s20'}}
@@ -63,9 +58,6 @@ export default function SingUp({navigation}: ScreenProps) {
       <FormTextInput
         control={control}
         name="fullName"
-        rules={{
-          required: 'Nome completo obrigatório',
-        }}
         placeholder="Digite seu nome completo"
         label="Nome Completo"
         boxProps={{mb:'s20'}}
@@ -74,13 +66,6 @@ export default function SingUp({navigation}: ScreenProps) {
       <FormTextInput
         control={control}
         name="email"
-        rules={{
-          required: 'E-mail obrigatório',
-          pattern: {
-            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-            message: 'E-mail inválido',
-          },
-        }}
         placeholder="Digite seu e-mail"
         label="E-mail"
         boxProps={{mb:'s20'}}
@@ -89,13 +74,6 @@ export default function SingUp({navigation}: ScreenProps) {
       <FormPasswordInput
         control={control}
         name="password"
-        rules={{
-          required: 'Senha obrigatória',
-          minLength: {
-            value: 8,
-            message: 'Senha deve ter no mínimo 8 caracteres',
-          },
-        }}
         placeholder="Digite sua senha"
         label="Senha"
         boxProps={{mb:'s48'}}
