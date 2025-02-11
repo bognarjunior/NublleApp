@@ -3,15 +3,16 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-import { Text } from '@components';
-import Button from '../../../components/Button';
-import Screen from '../../../components/Screen';
+import {
+  Screen,
+  Text,
+  Button,
+  FormTextInput,
+  FormPasswordInput,
+} from '@components';
+
 import { RootStackParamList } from '../../../routes';
 import { loginSchema, LoginSchemaType } from './schema';
-import FormTextInput from '../../../components/FormTextInput';
-import FormPasswordInput from '../../../components/FormPasswordInput';
-
-
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'Login'>;
 export default function Login({navigation}: ScreenProps) {

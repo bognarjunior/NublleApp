@@ -1,8 +1,8 @@
 import React from 'react';
 import {Controller, UseControllerProps, FieldValues} from 'react-hook-form';
-import TextInput, {TextInputProps} from '../TextInput';
+import {TextInputProps, TextInput} from '../TextInput';
 
-export default function FormTextInput<FormType extends FieldValues>({
+export function FormTextInput<FormType extends FieldValues>({
   control,
   name,
   rules,

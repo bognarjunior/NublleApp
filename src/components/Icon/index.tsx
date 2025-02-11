@@ -46,7 +46,7 @@ export interface IconProps {
   onPress?: () => void;
 }
 
-export default function Icon({
+export function Icon({
   name,
   color = 'backgroundContrast',
   size,

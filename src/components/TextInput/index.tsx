@@ -16,7 +16,7 @@ export interface TextInputProps extends RNTextInputProps {
   RightComponent?: ReactElement;
 }
 
-export default function TextInput({
+export function TextInput({
   label,
   errorMessage,
   RightComponent,

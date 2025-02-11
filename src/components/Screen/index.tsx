@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Box, TouchableOpacityBox } from '../Box';
 import { useAppSafeArea } from '../../hooks/useAppSafeArea';
-import Icon from '../Icon';
+import {Icon} from '../Icon';
 import { Text } from '../Text';
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import { ScrollViewContainer, ViewContainer } from './component/ScreenContainer';
@@ -13,7 +13,7 @@ interface Props {
   canGoBack?: boolean;
   scrollable?: boolean;
 }
-export default function Screen({
+export function Screen({
   children,
   canGoBack = false,
   scrollable = false,

@@ -13,7 +13,7 @@ interface ButtonProps extends TouchableOpacityBoxProps{
   disabled?: boolean
 }
 
-export default function Button({
+export function Button({
   title,
   loading,
   preset = 'primary',
