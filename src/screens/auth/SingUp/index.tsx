@@ -33,14 +33,14 @@ export default function SingUp({navigation}: ScreenProps) {
   function submitForm(data: SingUpSchemaType) {
     Alert.alert('Conta criada com sucesso!', data.username);
     console.log(data);
-    /* reset({
+    reset({
       title: 'Sua conta foi criada com sucesso!',
       description: 'Agora é só fazer login na nossa plataforma.',
       icon: {
         name: 'checkRound',
         color: 'success',
       },
-    }); */
+    });
 
   }
   return (
