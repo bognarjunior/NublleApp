@@ -1,22 +1,24 @@
 import React from 'react';
-import Screen from '../../../components/Screen';
-import { Text } from '../../../components/Text';
-import Button from '../../../components/Button';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../../routes';
-import { useAppResetNavigationSuccess } from '../../../hooks/useAppResetNavigationSuccess';
-import { useForm } from 'react-hook-form';
 import { Alert } from 'react-native';
-import FormTextInput from '../../../components/FormTextInput';
-import FormPasswordInput from '../../../components/FormPasswordInput';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { useForm } from 'react-hook-form';
 import { singUpSchema, SingUpSchemaType } from './schema';
 import { zodResolver } from '@hookform/resolvers/zod';
 
+import {
+  Text,
+  FormTextInput,
+  FormPasswordInput,
+  Screen,
+  Button,
+} from '@components';
 
+import { RootStackParamList } from '@routes';
+import { useAppResetNavigationSuccess } from '@hooks';
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SingUp'>;
 
-export default function SingUp({navigation}: ScreenProps) {
+export function SingUp({navigation}: ScreenProps) {
 
   const { reset } = useAppResetNavigationSuccess();
   const { control, handleSubmit, formState } = useForm<SingUpSchemaType>({

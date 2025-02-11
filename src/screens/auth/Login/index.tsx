@@ -11,11 +11,11 @@ import {
   FormPasswordInput,
 } from '@components';
 
-import { RootStackParamList } from '../../../routes';
+import { RootStackParamList } from '@routes';
 import { loginSchema, LoginSchemaType } from './schema';
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'Login'>;
-export default function Login({navigation}: ScreenProps) {
+export function Login({navigation}: ScreenProps) {
 
   const { control, handleSubmit, formState } = useForm<LoginSchemaType>({
     resolver: zodResolver(loginSchema),
