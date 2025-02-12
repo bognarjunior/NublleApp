@@ -1,6 +1,8 @@
 
 import React from 'react';
+
 import { Circle, Path, Svg } from 'react-native-svg';
+
 import { IconBaseProps } from '../../components/Icon';
 import { palette } from '../../theme/theme';
 

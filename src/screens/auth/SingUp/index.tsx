@@ -1,9 +1,10 @@
 import React from 'react';
 import { Alert } from 'react-native';
+
+import { zodResolver } from '@hookform/resolvers/zod';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useForm } from 'react-hook-form';
-import { singUpSchema, SingUpSchemaType } from './schema';
-import { zodResolver } from '@hookform/resolvers/zod';
+
 
 import {
   Text,
@@ -12,9 +13,10 @@ import {
   Screen,
   Button,
 } from '@components';
-
-import { RootStackParamList } from '@routes';
 import { useAppResetNavigationSuccess } from '@hooks';
+import { RootStackParamList } from '@routes';
+
+import { singUpSchema, SingUpSchemaType } from './schema';
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SingUp'>;
 

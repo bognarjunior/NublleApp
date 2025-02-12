@@ -1,12 +1,9 @@
 import React from 'react';
 import { Pressable } from 'react-native';
 
-import { ThemeColors } from '@theme';
 import { useAppTheme } from '@hooks';
+import { ThemeColors } from '@theme';
 
-import EyeOn from '../../assets/icons/EyeOn';
-import EyeOff from '../../assets/icons/EyeOff';
-import Trash from '../../assets/icons/Trash';
 import ArrowLeft from '../../assets/icons/ArrowLeft';
 import ArrowRight from '../../assets/icons/ArrowRight';
 import Bell from '../../assets/icons/Bell';
@@ -22,6 +19,8 @@ import Checkround from '../../assets/icons/CheckRound';
 import ChevronRight from '../../assets/icons/ChevronRight';
 import Comment from '../../assets/icons/Comment';
 import ErrorRound from '../../assets/icons/ErrorRound';
+import EyeOff from '../../assets/icons/EyeOff';
+import EyeOn from '../../assets/icons/EyeOn';
 import FlashOff from '../../assets/icons/FlashOff';
 import FlashOn from '../../assets/icons/FlashOn';
 import Heart from '../../assets/icons/Heart';
@@ -35,6 +34,7 @@ import Profile from '../../assets/icons/Profile';
 import ProfileFill from '../../assets/icons/ProfileFill';
 import Search from '../../assets/icons/Search';
 import Settings from '../../assets/icons/Settings';
+import Trash from '../../assets/icons/Trash';
 
 export interface IconBaseProps {
   size?: number;

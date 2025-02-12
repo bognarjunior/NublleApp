@@ -1,6 +1,7 @@
-import { ButtonPreset } from '.';
 import { ThemeColors } from '../../theme/theme';
 import { TouchableOpacityBoxProps } from '../Box';
+
+import { ButtonPreset } from '.';
 
 
 interface ButtonUIProps {

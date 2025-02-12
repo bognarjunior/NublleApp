@@ -1,5 +1,5 @@
-import { ScrollView, View } from 'react-native';
 import React, { ReactNode } from 'react';
+import { ScrollView, View } from 'react-native';
 
 interface Props {
   children: ReactNode;

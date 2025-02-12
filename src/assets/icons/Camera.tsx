@@ -1,6 +1,8 @@
 
 import React from 'react';
+
 import { Path, Svg } from 'react-native-svg';
+
 import { IconBaseProps } from '../../components/Icon';
 
 export default function Camera({size = 20, color = 'black'}: IconBaseProps) {

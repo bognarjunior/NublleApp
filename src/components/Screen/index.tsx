@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import { KeyboardAvoidingView, Platform } from 'react-native';
+
 import { useNavigation } from '@react-navigation/native';
 
 import {
@@ -8,7 +9,6 @@ import {
   Icon,
   Text,
 } from '@components';
-
 import {
   useAppTheme,
   useAppSafeArea,
@@ -35,7 +35,7 @@ export function Screen({
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-      style={{flex: 1}}
+      style={$KeyboardStyle}
     >
       <Container backgroundColor={colors.background}>
         <TouchableOpacityBox
@@ -54,3 +54,7 @@ export function Screen({
     </KeyboardAvoidingView>
   );
 }
+
+const $KeyboardStyle = {
+  flex: 1,
+};
