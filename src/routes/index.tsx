@@ -1,15 +1,11 @@
 import React from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { IconProps } from '@components';
-import {
-  Login,
-  SingUp,
-  Success,
-  ForgotPassword,
-} from '@screens';
+
+import { AppStack } from './appStack';
+import { AuthStack } from './authStack';
 
 export type RootStackParamList = {
   Login: undefined;
@@ -22,22 +18,15 @@ export type RootStackParamList = {
   ForgotPassword: undefined;
 };
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
 export default function Router() {
+  const authenticated = true;
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-          fullScreenGestureEnabled: true,
-        }}
-        initialRouteName="Login"
-      >
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="SingUp" component={SingUp} />
-        <Stack.Screen name="Success" component={Success} />
-        <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-      </Stack.Navigator>
+      {authenticated ? (
+        <AppStack />
+      ) : (
+        <AuthStack />
+      )}
     </NavigationContainer>
   );
 }
