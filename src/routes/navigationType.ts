@@ -1,7 +1,7 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-import { AppStackParamList } from './appStack';
-import { AuthStackParamList } from './authStack';
+import { AppStackParamList } from './AppStack';
+import { AuthStackParamList } from './AuthStack';
 declare global {
   namespace ReactNavigation {
     interface RootParamList extends AuthStackParamList, AppStackParamList {}

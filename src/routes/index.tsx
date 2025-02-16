@@ -2,12 +2,12 @@ import React from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
 
-import { AppStack } from './appStack';
-import { AuthStack } from './authStack';
+import { AppStack } from './AppStack';
+import { AuthStack } from './AuthStack';
 
 export * from './navigationType';
-export * from './appStack';
-export * from './authStack';
+export * from './AppStack';
+export * from './AuthStack';
 
 export default function Router() {
   const authenticated = true;
