@@ -8,6 +8,7 @@ import { AuthStack } from './AuthStack';
 export * from './navigationType';
 export * from './AppStack';
 export * from './AuthStack';
+export * from './AppTabNavigator';
 
 export default function Router() {
   const authenticated = true;
